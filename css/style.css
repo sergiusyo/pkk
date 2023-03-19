@@ -1163,11 +1163,11 @@ img {
     border-top: 5px solid #BFBFBF;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    transition: 0.02s;
+    transition: .2s;
 }
 
 
-.is-active.faq-tem::after .ui-state-active {
+.faq-item:active.faq-item::after {
     transform: rotate(-180deg);
 }
 
@@ -1765,6 +1765,11 @@ img {
 }
 
 
+.just-validate-error-label {
+    display: none;
+}
+
+
 .just-validate-success-field+.label-span {
     color: #E15858;
 
@@ -1841,11 +1846,6 @@ input {
     display: flex;
     align-items: center;
     color: rgba(103, 101, 97, 0.6);
-}
-
-
-.form-checkbox:hover+.form-label::before {
-    border-color: var(--text-elements__color);
 }
 
 
