@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container header-top_wrapper flex">
+                <picture>
+                    <a href="#" class="header-logo header-logo__pic flex"></a>
+                    <source media="(max-width: 415px)" srcset="img/logo.svg">
+                    <source media="(max-width: 768px)" srcset="img/logo_gorn.svg">
+                    <img src="img/logo.svg" alt="логотип_сайта">
+                </picture>
+                <span class="header-logo__title">Производство и продажа <br> сыпучих стройматериалов</span>
+                <div class="header-text">
+                    <span class="header-time">Пн-Пт c 8:00 до 17:00</span>
+                    <span class="header-address">Респ. Марий Эл, г. Йошкар-Ола, ул. Фестивальная, д.
+                        56</span>
+                </div>
+                <div class="header-contacts">
+                    <a href="tel:+74953225448" class="header-phone">
+                        +7 (987) 654-32-10
+                    </a>
+                    <a class="header-mail" href="#">info@weblitex.ru</a>
+                </div>
+                <button class="button header_btn" id="open-modal-btn">Заказать звонок</button>
+                <!-- модальное окно -->
+                <div class="modal" id="my-modal">
+                    <div class="modal__box">
+                        <button class="btn modal-close__btn" id="close-my-modal-btn">
+                            <svg width="20" height="20" viewbox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.80033 3.09371C3.60507 2.89845 3.28849 2.89845 3.09322 3.09371C2.89796 3.28897 2.89796 3.60556 3.09322 3.80082L9.29265 10.0002L3.09386 16.199C2.8986 16.3943 2.8986 16.7109 3.09386 16.9061C3.28912 17.1014 3.60571 17.1014 3.80097 16.9061L9.99976 10.7074L16.1985 16.9061C16.3938 17.1014 16.7104 17.1014 16.9057 16.9061C17.1009 16.7109 17.1009 16.3943 16.9057 16.199L10.7069 10.0002L16.9063 3.80082C17.1016 3.60556 17.1016 3.28897 16.9063 3.09371C16.711 2.89845 16.3944 2.89845 16.1992 3.09371L9.99976 9.29314L3.80033 3.09371Z"
+                                    fill="#676561" />
+                            </svg>
+                        </button>
+                        <h2 class="modal-title">Заявка на обратный звонок</h2>
+                        <p class="modal-text">Вышлем актуальные цены на Email</p>
+                        <form action="#" id="form" class="flex modal-form">
+                            <label class="input-lable">
+                                <input type="text" name="name" id="name" required>
+                                <span class="label-span">Имя*</span>
+                            </label>
+                            <label class="input-lable">
+                                <input type="tel" name="tel" id="tel" required>
+                                <span class="label-span">Телефон*</span>
+                            </label>
+                            <label class="input-lable">
+                                <input type="email" name="email" id="email" required>
+                                <span class="label-span">E-mail*</span>
+                            </label>
+                            <input id="checkbox" type="checkbox" name="agreement" class="form-checkbox" required
+                                aria-label="Дать согласие на обработку данных">
+                            <label for="checkbox" class="form-label checkbox">
+                                <span>Я согласен(-а) на обработку
+                                    персональных данных</span>
+                            </label>
+                            <button type="submit" name="submit" class="btn modal-form__button" enabled>Заказать
+                                звонок</button>
+                        </form>
+                    </div>
+                </div>
+                <!--КНОПКА БУРГЕРА-->
+                <button class="burger btn" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="container">
+                <div class="list-reset header-menu__list flex">
+                    <div class="header-menu__item">
+                        <a href="#" class="header-menu__item--link">Главная</a>
+                    </div>
+                    <div class="header-menu__item">
+                        <a href="#" class="header-menu__item--link">Цены</a>
+                    </div>
+                    <div class="header-menu__item">
+                        <a href="#" class="header-menu__item--link">Доставка и оплата</a>
+                    </div>
+                    <div class="header-menu__item">
+                        <a href="#" class="header-menu__item--link">Фотогалерея</a>
+                    </div>
+                    <!--ВЫПАДАЮЩЕЕ МЕНЮ-->
+                    <ul class="menu-drop">
+                        <li class="menu__item">
+                            <div class="button menu__button">Информация</div>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu__item">
+                                    <a class="header-menu__item-link header-menu__item-link_dropdown"
+                                        href="#">Отзывы</a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="header-menu__item-link header-menu__item-link_dropdown" href="#">Вопросы и
+                                        ответы</a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="header-menu__item-link header-menu__item-link_dropdown"
+                                        href="#">Вакансии</a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="header-menu__item-link header-menu__item-link_dropdown"
+                                        href="#">Документы</a>
+                                </li>
+                                <li class="dropdown-menu__item">
+                                    <a class="header-menu__item-link header-menu__item-link_dropdown"
+                                        href="#">Реквизиты</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="header-menu__item">
+                        <a href="#section-contacts" class="header-menu__item--link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--МОБИЛЬНОЕ МЕНЮ-->
+        <div class="header-mobile">
+            <a href="/" class="header-logo flex">
+                <img src="/img/logo.svg">
+                <span class="header-logo__title header-mobile_title">Производство и продажа <br> сыпучих
+                    стройматериалов</span>
+            </a>
+            <div class="contacts-content">
+                <div class="contacts-item contacts-item_phone">
+                    <div class="phone1">
+                        <a class="contacts-item__link contacts-item_phone" href="tel:+79297343777">+7 (987)
+                            654-32-10</a>
+                    </div>
+                </div>
+                <div class="btn-calling">
+                    <span class="header-calling">Заказать звонок</span>
+                </div>
+                <a class="contacts-item contacts-item_email" href="info@weblitex.ru">info@weblitex.ru</a>
+                <span class="contacts-item contacts-item_address">Респ. Марий Эл, г. Йошкар-Ола,
+                    ул. Фестивальная, д. 56</span>
+                <span class="contacts-item contacts-item_time">Пн-Пт c 8:00 до 17:00</span>
+            </div>
+            <div class="footer-menu__block flex">
+                <div class="footer-menu menu_info">
+                    <span class="menu-title">Информация</span>
+                    <ul class="list-reset footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Контакты</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Реквизиты</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Документы</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Фотогалерея</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Вакансии</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu menu_byers">
+                    <span class="menu-title">Покупателям</span>
+                    <ul class="list-reset footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Продукция и цены</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Вопросы и ответы</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--ФОН САЙТА-->
+        <section class="hero">
+            <img src="/img/background.png" class="hero-img">
+            <div class="container">
+                <div class="hero-container">
+                    <h1 class="hero-title"><span>Доставка щебня</span>
+                        <br> и других сыпучих строительных материалов
+                    </h1>
+                    <div class="hero-text">Крупнейший производитель щебня в Республике Марий Эл</div>
+                    <div class="hero-list">
+                        <div class="hero-item">
+                            <span class="hero-item__icon item_icon"><img src="/img/house-fabrica.svg"
+                                    alt="item_1"></span>
+                            <span class="hero-item__text item_icon">Собственный дробильно-сортировочный завод</span>
+                        </div>
+                        <div class="hero-item">
+                            <span class="hero-item__icon item_icon"><img src="/img/icon technic.svg"
+                                    alt="item_2"></span>
+                            <span class="hero-item__text">Автопарк самосвальной и&nbsp;погрузочной техники</span>
+                        </div>
+                        <div class="hero-item">
+                            <span class="hero-item__icon item_icon"><img src="img/map.svg" alt="item_3"></span>
+                            <span class="hero-item__text">Работаем по всей Республике Марий Эл</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--ПРОДУКЦИЯ-->
+        <section class="products">
+            <div class="container">
+                <div class="products-inner">
+                    <h2 class="products-title">Продукция и цены</h2>
+                    <span class="products-subtitle">*Цены указаны без учета доставки. Чтобы узнать полную стоимость с
+                        учетом доставки позвоните нам по телефону или оставьте заявку на сайте</span>
+                </div>
+                <!--КАРТОЧКИ ПРОДУКТОВ-->
+                <div class="cards-wrapper flex">
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_1.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень фракция 0/50 мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            270 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            300 ₽/т
+                                        </span>
+                                        за безналичный расчёт
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_2.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень фракция 5/20 мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            380 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            380 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_3.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень фракция 16/31.5мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            540 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            600 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_4.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень
+                                    фракция 31,5/63 мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            540 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            600 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_5.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень фракция 40/120 мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            540 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            600 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_6.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковый щебень фракция 8/16 мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price">
+                                            490 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            520 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_7.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Бутовый камень</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            530 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            550 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__item ">
+                        <div class="list-card">
+                            <div class="products-image">
+                                <img src="img/products_item_8.png">
+                            </div>
+                            <div class="card-content">
+                                <a href="" class="card-content__title">Известняковая мука сыромолотая 1-5мм</a>
+                                <div class="card-item__price flex">
+                                    <div class="card-left">
+                                        <span class="card-price card-price_count">
+                                            150 ₽/т
+                                        </span>
+                                        за наличный расчёт
+                                    </div>
+                                    <div class="card-right">
+                                        <span class="card-price card-price_count">
+                                            150 ₽/т
+                                        </span>
+                                        <span>за безналичный расчет</span>
+                                    </div>
+                                </div>
+                                <span class="button product_btn">Заказать</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--О КОМПАНИИ-->
+        <section class="about">
+            <div class="container">
+                <h2 class="about-title">О компании</h2>
+                <div class="about-blocks flex">
+                    <div class="about-content">
+                        <p class="about-text">Акционерное общество «Памашъяльский каменный карьер» на рынке
+                            строительных материалов с 1997 года. Организация занимается добычей и переработкой
+                            карбонатных пород. Продолжается рекультивация нарушенных земель на карьере путем
+                            транспортировки вскрышных пород в отработанное пространство. <br>
+                            <br>
+                            Имеем собственный дробильно-сортировочный завод, парк погрузочной и самосвальной
+                            техники.
+                            Выпускаем щебень карбонатных пород М 400 разных фракций и известняковую муку,
+                            применяемую в
+                            сельском хозяйстве для известкования кислых почв.
+                        </p>
+                        <div class="list-reset about-description__list flex">
+                            <div class="about-list__item flex">
+                                <img class="about-description__pic" src="/img/calendar.svg" alt="календарь">
+                                <span class="about-description__text flex">Работаем с 1997 года</span>
+                            </div>
+                            <div class="about-list__item flex">
+                                <img class="about-description__pic" src="/img/pay.svg" alt="оплата">
+                                <span class="about-description__text flex">Любой удобный тип оплаты</span>
+                            </div>
+                            <div class="about-list__item flex">
+                                <img class="about-description__pic" src="/img/truckroad.svg" alt="доставка">
+                                <span class="about-description__text flex">Быстрая доставка</span>
+                            </div>
+                            <div class="about-list__item flex">
+                                <img class="about-description__pic" src="/img/weight.svg" alt="отгрузка">
+                                <span class="about-description__text flex">Отгрузка материалов по весам</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--СВАЙПЕР-->
+                    <div class="swiper__box">
+                        <div class="swiper1 swiper_container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide swiper-slide__img">
+                                    <img src="img/image_about.png" alt="1">
+                                </div>
+                                <div class="swiper-slide swiper-slide__img">
+                                    <img src="img/image_about.png" alt="2">
+                                </div>
+                                <div class="swiper-slide swiper-slide__img">
+                                    <img src="img/image_about.png" alt="3">
+                                </div>
+                                <div class="swiper-slide swiper-slide__img">
+                                    <img src="img/image_about.png" alt="4">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--НАШ АВТОПАРК-->
+        <section class="autopark">
+            <div class="container">
+                <div class="autopark-inner">
+                    <h2 class="autopark-title">Наш автопарк</h2>
+                    <span class="autopark-subtitle">Наш автопарк спецтехники состоит из самосвалов с объёмом кузова от
+                        10 м3
+                        до 32 м3 </span>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev prev_arrow"></div>
+                    <div class="swiper-button-next next_arrow"></div>
+                </div>
+                <div class="swiper__box">
+                    <div class="swiper2 swiper2_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide_img">
+                                <picture class="about__card-img">
+                                    <source media="(max-width: 768px)" srcset="img/iPad_kamaz_55111.png">
+                                    <img src="img/kamaz_55111.png" alt="kamaz">
+                                </picture>
+                                <div class="swiper-card__content">
+                                    <h5 class="card-title">Самосвал «Камаз 5511»</h5>
+                                    <span class="card-text">2 шт.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide_img">
+                                <picture class="about__card-img">
+                                    <source media="(max-width: 768px)" srcset="img/iPad_belaz75405.png">
+                                    <img src="/img/belaz_75405.png" alt="belaz">
+                                </picture>
+                                <div class="swiper-card__content">
+                                    <h5 class="card-title">Самосвал «БелАЗ 7540»</h5>
+                                    <span class="card-text">5 шт.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide_img">
+                                <picture class="about__card-img">
+                                    <source media="(max-width: 768px)" srcset="img/iPad_kamaz_55111.png">
+                                    <img src="img/kamaz_55111.png" alt="kamaz">
+                                </picture>
+                                <div class="swiper-card__content">
+                                    <h5 class="card-title">Самосвал «Камаз 5511»</h5>
+                                    <span class="card-text">2 шт.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide_img">
+                                <div class="swiper-slide swiper-slide_img">
+                                    <picture class="about__card-img">
+                                        <source media="(max-width: 768px)" srcset="img/iPad_stalowa wola l-34">
+                                        <img src="/img/stalowa wola l-34.png" alt="stalowa">
+                                    </picture>
+                                    <div class="swiper-card__content">
+                                        <h5 class="card-title">Погрузчик «Stalowa Wola»</h5>
+                                        <span class="card-text">3 шт.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide_img">
+                                <picture class="about__card-img">
+                                    <source media="(max-width: 768px)" srcset="img/iPad_kamaz_55111.png">
+                                    <img src="img/kamaz_55111.png" alt="kamaz">
+                                </picture>
+                                <div class="swiper-card__content">
+                                    <h5 class="card-title">Самосвал «Камаз 5511»</h5>
+                                    <span class="card-text">2 шт.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide_img">
+                                <picture class="about__card-img">
+                                    <source media="(max-width: 768px)" srcset="img/iPad_belaz75405.png">
+                                    <img src="/img/belaz_75405.png" alt="belaz">
+                                </picture>
+                                <div class="swiper-card__content">
+                                    <h5 class="card-title">Самосвал «БелАЗ 7540»</h5>
+                                    <span class="card-text">5 шт.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination dots"></div>
+                    </div>
+                    <!--ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ-->
+                    <div class="faq">
+                        <h2 class="faq-title">Часто задаваемые вопросы</h2>
+                        <ul class="faq-accordion accordion-container">
+                            <li class="faq-item">
+                                <h3 class="question-title ac-header ac-trigger">
+                                    От чего зависит стоимость доставки?
+                                </h3>
+                                <p class="answer-list__title ac-panel">
+                                    На стоимость доставки влияют такие факторы как: <br>
+                                    1. Расстояние от производственной площадки до объекта; <br>
+                                    2. Общее количество заказанного материала, на оптовые заказы
+                                    предоставляются дополнительные скидки; <br>
+                                    3. Тип автомобиля проходящего по габаритам на объекте (чем
+                                    больше вместимость самосвала, тем дешевле стоимость доставки в расчете на 1 куб.)
+                                    <br>
+                                    4. Тип оплаты - при оплате с НДС, доставка выходит немного
+                                    дороже, чем при оплате наличными.
+                                </p>
+                            </li>
+                            <li class="faq-item">
+                                <h3 class="question-title ac-header ac-trigger">
+                                    Как можно оплатить заказ при доставке?
+                                </h3>
+                                <p class="answer-list__title ac-panel"> На стоимость доставки влияют такие факторы как:
+                                    <br>
+                                    1. Расстояние от производственной площадки до объекта; <br>
+                                </p>
+                            </li>
+                            <li class="faq-item ac">
+                                <h3 class="question-title ac-header ac-trigger">
+                                    Какими самосвалами осуществляется доставка?
+                                </h3>
+                                <p class="answer-list__title ac-panel">
+                                    2. Общее количество заказанного материала, на оптовые заказы
+                                    предоставляются дополнительные скидки;
+                                    3. Тип автомобиля проходящего по габаритам на объекте (чем
+                                    больше вместимость самосвала, тем дешевле стоимость доставки в расчете на 1 куб.)
+                                </p>
+                            </li>
+                            <li class="faq-item ac">
+                                <h3 class="question-title ac-header ac-trigger">
+                                    Чем отличается щебень от гравия?
+                                </h3>
+                                <p class="answer-list__title ac-panel">
+                                    4. Тип оплаты - при оплате с НДС, доставка выходит немного
+                                    дороже, чем при оплате наличными.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--КОНТАКТЫ-->
+        <section class="contacts" id="section-contacts">
+            <div class="container">
+                <div class="contacts-content content">
+                    <h2 class="contacts-title">Контакты</h2>
+                    <span class="contacts-item contacts-item_address">Респ. Марий Эл, г. Йошкар-Ола, <br> ул.
+                        Фестивальная,
+                        д. 56</span>
+                    <div class="contacts-item contacts-item_phone">
+                        <div class="phone1">
+                            <a class="contacts-item__link" href="tel:+79297343777">+7 (987) 654-32-10</a>
+                            <span>Отдел продаж</span>
+                        </div>
+                        <div class="phone2">
+                            <a class="contacts-item__link" href="tel:+78363395118">+7 (987) 012-34-56</a>
+                            <span>Бухгалтерия</span>
+                        </div>
+                    </div>
+                    <a class="contacts-item__link contacts-item_email" href="info@weblitex.ru">info@weblitex.ru</a>
+                    <span class="contacts-item contacts-item_time">Пн-Пт c 8:00 до 17:00</span>
+                </div>
+            </div>
+            <!--ЯНДЕКС-КАРТА-->
+            <div class="map" id="map"></div>
+        </section>
+    </main>
+    <!--ФУТЕР-->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-top_container flex">
+                <a href="#" class="header-logo footer_logo">
+                    <img src="/img/logo.svg" alt="logotip">
+                    <span class="footer-logo__title">Производство и продажа <br> сыпучих стройматериалов</span>
+                </a>
+                <div class="footer-menu__block flex">
+                    <div class="footer-menu menu_info">
+                        <span class="menu-title">Информация</span>
+                        <ul class="list-reset footer-menu__list">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Реквизиты</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Документы</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Фотогалерея</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Вакансии</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu menu_byers">
+                        <span class="menu-title">Покупателям</span>
+                        <ul class="list-reset footer-menu__list">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Продукция и цены</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Доставка и оплата</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-contacts footer_contacts">
+                    <a class="footer-contact__phone" href="tel:+79297343777">+7 (987) 654-32-10</a>
+                    <a class="footer-contact__email" href="info@weblitex.ru">info@weblitex.ru</a>
+                </div>
+                <span class="button footer_btn flex">Написать письмо</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom_container flex">
+                <span class="footer-bottom__text">© 2022, Производство и продажа <br> сыпучих материалов</span>
+                <div class="footer-block__info flex">
+                    <a href="#" class="footer-bottom__text bottom_text">Политика конфиденциальности</a>
+                    <span class="footer-bottom__text footer-bottom__text">Информация на сайте не является публичной
+                        офертой</span>
+                </div>
+                <a class="litex-logo flex" href="#">Разработка сайтов «Лайтекс» </a>
+            </div>
+        </div>
+    </footer>
+    <div class="up-btn btn">
+        <svg width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="46" rx="2" fill="#E59456B2" />
+            <path
+                d="M28.7315 26H16.6453C16.0734 26 15.782 25.3094 16.1921 24.8993L22.2351 18.8562C22.4833 18.608 22.8934 18.608 23.1417 18.8562L29.1848 24.8993C29.5948 25.3094 29.3034 26 28.7315 26Z"
+                fill="white" />
+        </svg>
+    </div>
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"
+        type="text/javascript"></script>
+    <script defer src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script defer src="js/zoom_layout.js" type="text/javascript"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="js/jquery-ui.min.js"></script>
+
+    <script defer src="js/inputmask.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>

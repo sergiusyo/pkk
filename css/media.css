@@ -1,0 +1,1226 @@
+@media (max-width: 1200px) {
+    .header-text {
+        display: none;
+    }
+
+
+    .header-contacts {
+        flex-grow: 2;
+        text-align: right;
+        padding-top: 7px;
+    }
+
+
+    .header-mail {
+        display: block;
+    }
+
+
+    .footer_logo img {
+        margin-right: 14px;
+    }
+
+
+    /*ПРОДУКЦИЯ*/
+    .products-list__item {
+        padding: 0 15px 15px 0px;
+
+    }
+
+
+    /*О НАС*/
+    .cards-wrapper {
+        width: 101%;
+    }
+
+
+    /*АВТОПАРК*/
+    .swiper2_container {
+        height: 196px;
+    }
+
+
+    .prev_arrow {
+        left: 91%;
+    }
+
+    .next_arrow {
+        left: 96%;
+    }
+
+
+    /*ФУТЕР*/
+    .footer-top_container {
+        flex-wrap: wrap;
+    }
+
+
+    .footer-menu__block {
+        order: 10;
+        margin-top: 44px;
+    }
+
+
+    .footer-contact__email {
+        display: block;
+    }
+
+
+}
+
+
+@media (max-width: 992px) {
+
+    /*HERO*/
+    .hero {
+        min-height: 0;
+    }
+
+
+    .hero-text {
+        max-width: 266px;
+    }
+
+
+
+    /*ПРОДУКТЫ*/
+    .products-list__item {
+        width: 33%;
+        padding: 0 10px 15px 0;
+    }
+
+
+    .cards-wrapper {
+        width: 102%;
+    }
+
+
+    /*АВТОПАРК*/
+    .autopark-subtitle {
+        font-size: 15px;
+    }
+
+
+    .prev_arrow {
+        left: 89%;
+    }
+
+    .next_arrow {
+        left: 95%;
+    }
+
+
+    .faq-accordion {
+        padding: 45px 15px 54px 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /*ХЭДЕР*/
+    .header-top_wrapper {
+        padding-top: 18px;
+        height: 94px;
+        padding-bottom: 18px;
+    }
+
+
+    .header-phone::before {
+        left: -25px;
+    }
+
+
+    .header_btn {
+        position: relative;
+        top: 15%;
+    }
+
+
+    /*HERO*/
+    .hero {
+        padding: 95px 0 51px;
+    }
+
+
+    .hero-item {
+        position: relative;
+        top: 7%;
+    }
+
+
+    .hero-item__icon {
+        width: 47px;
+        height: 47px;
+    }
+
+    .hero-title {
+        max-width: 470px;
+        margin-top: 95px;
+        font-size: 34px;
+        line-height: 50px;
+        color: #FEFEFD;
+    }
+
+    .hero-list {
+        height: 116px;
+    }
+
+
+    /*ПРОДУКЦИЯ*/
+    .products {
+        padding: 51px 0 51px;
+    }
+
+
+    .products-inner {
+        padding-left: 0;
+    }
+
+
+    .products-title {
+        margin-bottom: 11px;
+        position: static;
+        font-size: 26px;
+        line-height: 39px;
+    }
+
+
+    .products-subtitle {
+        font-size: 14px;
+    }
+
+
+    .cards-wrapper {
+        margin-top: 34px;
+    }
+
+
+    .products-list__item {
+        width: 33%;
+    }
+
+
+    .products-image {
+        height: 125px;
+    }
+
+
+    .card-content {
+        padding: 16px 10px 32px;
+    }
+
+
+    /*О НАС*/
+    .about {
+        padding: 60px 0 60px;
+        background-image: url('/img/iPad_about_background.png');
+    }
+
+
+    .about-title {
+        position: static;
+    }
+
+
+    .about-title {
+        margin-bottom: 49px;
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #4D4A46;
+    }
+
+
+    .about-blocks {
+        flex-direction: column-reverse;
+    }
+
+
+    .about-content {
+        max-width: 100%;
+        left: 0;
+        padding: 45px 55px 45px;
+    }
+
+
+    .swiper-slide__img img {
+        width: 720px;
+    }
+
+
+    /*АВТОПАРК*/
+    .autopark {
+        padding: 71px 0 70px;
+        background: url('/img/iPad_autopark_bg.png') no-repeat center, rgb(46, 44, 43);
+    }
+
+
+    .autopark-inner {
+        width: 332px;
+    }
+
+
+    .autopark-title {
+        position: static;
+        margin-bottom: 11px;
+        font-size: 26px;
+        line-height: 39px;
+    }
+
+
+    .autopark-subtitle {
+        margin-bottom: 34px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+
+    .swiper2_container {
+        height: 196px;
+    }
+
+
+    /*ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ*/
+    .faq {
+        padding: 90px 0 0 0;
+    }
+
+
+    .faq-accordion {
+        padding: 45px 15px 54px 25px;
+    }
+
+
+    .faq-title {
+        position: static;
+        margin-bottom: 49px;
+        font-size: 26px;
+        line-height: 39px;
+    }
+
+
+    /*КОНТАКТЫ*/
+    .contacts {
+        padding: 71px 0 0 0;
+    }
+
+
+    .contacts-title {
+        font-size: 26px;
+        line-height: 39px;
+        margin-bottom: 36px;
+    }
+
+
+    .contacts-item_address {
+        width: 236px;
+    }
+
+
+    .contacts-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 40px;
+        box-shadow: none;
+        background: transparent;
+        align-items: flex-start;
+    }
+
+
+    .contacts-title {
+        width: 100%;
+        margin-bottom: 36px;
+    }
+
+
+    .contacts-item:not(:last-child) {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+
+    .contacts-item_address {
+        width: 50%;
+    }
+
+
+    .phone1 {
+        margin-bottom: 14px;
+    }
+
+
+    .contacts-item_phone {
+        display: block;
+        order: 3;
+    }
+
+
+    .contacts-item_phone a {
+        position: relative;
+        display: block;
+        margin: 0;
+    }
+
+
+    .contacts-item__link {
+        display: block;
+        order: 2;
+    }
+
+
+    .contacts-item_email {
+        display: block;
+        order: 2;
+
+    }
+
+    .contacts-item_time {
+        display: block;
+        order: 3;
+        margin: 0;
+    }
+
+
+    .map {
+        position: static;
+        height: 455px;
+    }
+
+
+    /*ФУТЕР*/
+    .footer-top {
+        padding: 57px 0 65px;
+    }
+
+
+    .footer-bottom {
+        padding: 13px 0 35px 0;
+    }
+
+
+    .footer-bottom__text {
+        width: 29%;
+    }
+
+
+    .footer-block__info {
+        display: block;
+        white-space: nowrap;
+    }
+
+
+    .footer_contacts {
+        padding-top: 0;
+    }
+
+
+    .litex-logo {
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .litex-logo::before {
+        width: 40px;
+        height: 16px;
+        left: 5%;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .container {
+        padding: 0 20px;
+    }
+
+
+    /*ХЭДЕР*/
+    .header-top_wrapper {
+        height: 70px;
+        padding-bottom: 9px;
+        padding-top: 9px;
+    }
+
+
+    .header-logo img {
+        display: block;
+        width: 47px;
+        height: 52px;
+    }
+
+    .header-logo__pic img {
+        margin-right: 20px;
+    }
+
+
+    .header-contacts {
+        padding: 15px;
+        margin: 0;
+        text-align: left;
+    }
+
+
+    .header-phone {
+        font-size: 14px;
+        line-height: 17px;
+        padding-left: 22px;
+    }
+
+
+    .header-phone::before {
+        left: 0;
+    }
+
+
+    .header_btn {
+        width: 40px;
+        height: 40px;
+        color: transparent;
+        padding: 0;
+        font-size: 0;
+        background: url('/img/iPhone_header_btn.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .header-logo__title,
+    .header-mail,
+    .header-menu {
+        display: none;
+    }
+
+
+    /*HERO*/
+    .hero {
+        padding: 70px 0 81px;
+    }
+
+
+    .hero-title {
+        width: 90%;
+        font-size: 28px;
+        line-height: 41px;
+        margin-bottom: 22px;
+    }
+
+
+    .hero-text {
+        margin-bottom: 62px;
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+
+    .hero-list {
+        display: block;
+        background: none;
+        width: 100%;
+        height: 166px;
+        max-width: 237px;
+    }
+
+
+    .hero-item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 7px;
+        padding: 0;
+        width: 229px;
+        background: rgba(48, 46, 44, 0.7);
+    }
+
+
+    .hero-item__icon {
+        width: 47px;
+        height: 100%;
+        min-height: 47px;
+        flex-shrink: 0;
+        margin: 0 12px 0 0;
+    }
+
+
+    .item-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .hero-item__text {
+        padding: 6px 8px -1px 0;
+    }
+
+    /*ПРОДУКЦИЯ*/
+    .products {
+        padding-top: 54px;
+    }
+
+
+    .products-title {
+        text-align: center;
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 17px;
+    }
+
+
+    .products-subtitle {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .cards-wrapper {
+        margin-top: 44px;
+        flex-direction: column;
+    }
+
+
+    .products-image {
+        width: 33.5%;
+        height: auto;
+    }
+
+
+    .list-card {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .products-list__item {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+
+    .card-content {
+        width: 65%;
+        padding: 13px 18px 17px 18px;
+    }
+
+
+    .card-price_count {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .product_btn {
+        height: 38px;
+    }
+
+
+    /*О КОМПАНИИ*/
+    .about {
+        background-image: none;
+        padding-bottom: 0;
+    }
+
+
+    .about-title {
+        text-align: center;
+    }
+
+
+    .swiper_container {
+        height: auto;
+    }
+
+
+    .swiper-slide__img img {
+        height: auto;
+    }
+
+
+    .about-content {
+        box-shadow: none;
+        padding: 0;
+    }
+
+
+    .about-text {
+        margin-bottom: 38px;
+    }
+
+
+    .about-description__list {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+
+    .about-list__item {
+        margin-bottom: 34px;
+    }
+
+
+    /*АВТОПАРК*/
+    .autopark {
+        padding: 71px 0 70px;
+    }
+
+
+    .autopark-inner {
+        width: 100%;
+    }
+
+
+    .autopark-title {
+        text-align: center;
+        margin-bottom: 17px;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+
+    .autopark-subtitle {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 54px;
+        text-align: center;
+    }
+
+
+    .swiper2_container {
+        height: 196px;
+    }
+
+
+    .swiper-pagination-bullets {
+        position: static;
+    }
+
+
+    .prev-arrow {
+        left: 89%;
+    }
+
+    .next_arrow {
+        left: 95%;
+    }
+
+
+    /*ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ*/
+    .faq {
+        padding: 70px 0 0;
+    }
+
+
+    .faq-title {
+        font-size: 22px;
+        line-height: 33px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+
+    .faq-accordion {
+        background: #33312F;
+        opacity: .8;
+        border-radius: 2px;
+        padding: 53px 30px 54px 22px;
+        margin: 0 -20px;
+    }
+
+
+    .faq-item::before {
+        top: 17px;
+        left: 27px;
+    }
+
+
+    .question-title {
+        display: flex;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+
+    .answer-list__title {
+        background: #33312F;
+    }
+
+
+    .ui-accordion .ui-accordion-header {
+        display: flex;
+        padding-left: 42px;
+    }
+
+
+    .ui-accordion .ui-accordion-content {
+        padding: 8px 60px 4px;
+    }
+
+
+    /*КОНТАКТЫ*/
+    .contacts-title {
+        text-align: center;
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 40px;
+    }
+
+
+    .contacts-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .contacts-item:not(:last-child) {
+        width: 52%;
+    }
+
+    .contacts-item_address {
+        width: 33%;
+        text-align: left;
+    }
+
+
+    .contacts-item_email {
+        order: 3;
+        margin-bottom: 27px;
+        width: 50%;
+        text-align: start;
+    }
+
+
+    .contacts-item_time {
+        width: 50%;
+        text-align: start;
+    }
+
+
+    /*ФУТЕР*/
+    .footer-top_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer_logo {
+        margin-bottom: 38px;
+    }
+
+
+    .footer_contacts {
+        padding: 0;
+    }
+
+
+    .footer-contact__email {
+        text-align: center;
+        margin-top: 12px;
+    }
+
+
+    .footer-menu {
+        padding: 0 30px;
+    }
+
+
+    .footer-menu__list {
+        columns: 1;
+    }
+
+
+    .footer_btn {
+        margin-top: 42px;
+        margin-bottom: 61px;
+    }
+
+
+    .footer-bottom {
+        padding: 23px 0 36px 0;
+    }
+
+
+    .footer-bottom_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-bottom__text {
+        margin-bottom: 19px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .bottom_text {
+        margin: 0;
+    }
+
+
+    .litex-logo::before {
+        left: 9px;
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .dots {
+        display: block;
+    }
+
+    .swiper-buttons {
+        display: none;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    /*ХЭДЕР*/
+    .header-mobile_title {
+        display: inline-flex;
+    }
+
+
+    .header_btn {
+        position: relative;
+        top: 3px;
+    }
+
+
+    /*МОДАЛЬНОЕ ОКНО*/
+    .modal__box {
+        width: 414px;
+        padding: 100px 65px 65px;
+    }
+
+    .modal-close__btn {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        right: 22px;
+        top: 22px;
+        background: none;
+        cursor: pointer;
+    }
+
+
+    .modal-title {
+        margin-bottom: 12px;
+    }
+
+
+    .modal-text {
+        margin-bottom: 37px;
+    }
+
+
+    .modal-form {
+        justify-content: center;
+    }
+
+
+    input {
+        width: 285px;
+        height: 40px;
+        margin-bottom: 32px;
+    }
+
+
+    .input-lable {
+        margin-bottom: 0;
+    }
+
+
+    .form-label span {
+        margin-bottom: 36px;
+    }
+
+
+    .burger {
+        display: block;
+    }
+
+
+    .header-mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #fff;
+        display: block;
+        padding: 10px 10px;
+        overflow: hidden;
+        color: black;
+        overflow-y: auto;
+        visibility: hidden;
+        transition: .2s;
+    }
+
+
+    .header.open .header-mobile {
+        height: 100vh;
+        visibility: visible;
+    }
+
+
+    /*АККОРДИОН*/
+    .question-title {
+        padding: 0;
+    }
+
+
+    .faq-item::after {
+        right: 5px;
+    }
+
+
+    .ui-accordion .ui-accordion-content {
+        display: flex;
+    }
+
+
+    /*КОНТАКТЫ*/
+    .contacts {
+        padding-top: 0 !important;
+    }
+
+
+    .contacts-content {
+        margin: 54px 0;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .content {
+        align-items: center;
+    }
+
+
+    .contacts-item_phone {
+        background: url('/img/contacts_phone.svg');
+        background-repeat: no-repeat;
+        padding-left: 25px;
+        order: 1;
+    }
+
+
+    .phone1 {
+        margin: 0;
+    }
+
+
+    .contacts-item_phone a {
+        background-image: none;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+
+    .contacts-item {
+        width: 86%;
+    }
+
+
+    .contacts-item_address {
+        order: 3;
+    }
+
+
+    .contacts-item_email {
+        order: 2;
+    }
+
+
+    .contacts-content {
+        margin: 46px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .btn-calling {
+        position: relative;
+        display: flex;
+        justify-content: right;
+        width: 105%;
+    }
+
+
+    .contacts-item_email {
+        order: 2;
+    }
+
+
+    .header-calling {
+        position: absolute;
+        display: block;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #4D4A46;
+        opacity: 0.9;
+        padding-left: 25px;
+        padding-right: 20px;
+        background: url('/img/calling_gray.svg') no-repeat left center;
+    }
+
+
+    .contacts-item:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
+
+    /*ФУТЕР*/
+    .footer-menu__block {
+        padding: 0;
+        margin: 0;
+        column-gap: 100px;
+    }
+
+
+    .footer-menu {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+
+@media (max-width: 415px) {
+
+    /*ХЭДЕР*/
+    .header_btn {
+        width: 40px;
+        height: 35px;
+        top: 7px;
+        right: 2%;
+    }
+
+
+    .header-phone::before {
+        left: -7px;
+    }
+
+
+    /*МОДАЛЬНОЕ ОКНО*/
+    .modal__box {
+        width: 320px;
+        padding: 100px 33px 33px;
+    }
+
+    .modal-close__btn {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        right: 22px;
+        top: 22px;
+        background: none;
+        cursor: pointer;
+    }
+
+
+    .modal-title {
+        margin-bottom: 8px;
+    }
+
+
+    .modal-text {
+        margin-bottom: 19px;
+    }
+
+
+    .modal-form {
+        justify-content: center;
+    }
+
+
+    input {
+        width: 253px;
+        height: 40px;
+        margin-bottom: 14px;
+    }
+
+
+    .form-label span {
+        margin-bottom: 26px;
+    }
+
+
+    .burger {
+        margin-left: 6px;
+        margin-right: 4px;
+    }
+
+
+    .header-calling {
+        padding-right: 14px;
+    }
+
+
+    .header-phone {
+        font-size: 14px;
+        padding-left: 13px;
+        white-space: nowrap;
+    }
+
+
+    /*ПРОДУКЦИЯ*/
+    .card-content__title {
+        font-size: 13px;
+    }
+
+
+    .card-left,
+    .card-right {
+        font-size: 10px;
+    }
+
+
+    .products-subtitle {
+        font-size: 14px;
+    }
+
+
+    /*О НАС*/
+    .about-description__list {
+        white-space: nowrap;
+    }
+
+
+    /*АВТОПАРК*/
+    .ui-accordion .ui-accordion-header {
+        font-size: 13px;
+    }
+
+
+    .ui-accordion .ui-accordion-heade {
+        font-size: 13px;
+    }
+
+
+    /*КОНТАКТЫ*/
+    .contacts-item:not(:last-child) {
+        width: 85%;
+    }
+
+
+    .contacts-item {
+        width: 86%;
+    }
+
+
+    /*ФУТЕР*/
+    .footer-menu__block {
+        column-gap: 65px;
+    }
+}
