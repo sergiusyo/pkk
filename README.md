@@ -1,9 +1,9 @@
 # pkk
 Сайт продуктовой компании, коммерческий. Памашъялский песчаный карьер, тестовое задание. Одобрено. С адаптивами и JS.
 
-# <span style="font-size:12px;">Стек технолоний на проекте: HTML, CSS, JavaScript. Библиотеки JS:</span>
+<span style="font-size:12px;">Стек технолоний на проекте: HTML, CSS, JavaScript. Библиотеки JS:</span>
 
-# <span style="font-size:12px;">-JQuery-UI.</span>
+<span style="font-size:12px;">-JQuery-UI.</span>
 # -Graph-modal.js: создание модальных окон.
 # -Accordion.js: создание аккордионов по клику на заголовок.
 # -Just-validate: валидация форм.
