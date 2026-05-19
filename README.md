@@ -3,7 +3,7 @@
 
 # <span style="font-size:12px;">Стек технолоний на проекте: HTML, CSS, JavaScript. Библиотеки JS:</span>
 
-# -JQuery-UI.
+# -JQuery-UI. <span style="font-size:12px;">-JQuery-UI.</span>
 # -Graph-modal.js: создание модальных окон.
 # -Accordion.js: создание аккордионов по клику на заголовок.
 # -Just-validate: валидация форм.
